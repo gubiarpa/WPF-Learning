@@ -27,7 +27,7 @@
 
             <!-- Description -->
             <TextBlock Text="Description" />
-            <TextBox Padding="2" />
+            <TextBox x:Name="DescriptionText" Padding="2" />
 
             <!-- Status and Revision -->
             <Grid>
@@ -98,7 +98,7 @@
 
             <!-- Mass -->
             <TextBlock Text="Mass" />
-            <TextBox IsReadOnly="True" Background="#eee" Padding="2" />
+            <TextBox x:Name="MassText" IsReadOnly="True" Background="#eee" Padding="2" />
 
             <!-- Finish -->
             <TextBlock Text="Finish" />
@@ -116,7 +116,7 @@
 
             <!-- Supplier Name -->
             <TextBlock Text="Supplier Name" />
-            <TextBox Padding="2" />
+            <TextBox x:Name="SupplierNameText" TextChanged="SupplierNameText_TextChanged" Padding="2" />
 
             <!-- Supplier Code -->
             <TextBlock Text="Supplier Code" />

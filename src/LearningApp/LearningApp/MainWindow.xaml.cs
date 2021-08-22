@@ -27,7 +27,7 @@ namespace LearningApp
 
         private void ApplyButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hi");
+            MessageBox.Show($"The description is: {DescriptionText.Text}");
         }
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
@@ -60,6 +60,11 @@ namespace LearningApp
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             FinishDropDown_SelectionChanged(FinishDropDown, null);
+        }
+
+        private void SupplierNameText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            MassText.Text = SupplierNameText.Text;
         }
     }
 }
