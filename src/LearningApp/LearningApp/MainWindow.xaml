@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LearningApp"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="MainWindow" Height="800" Width="400">
     <Border Padding="10">
         <StackPanel>

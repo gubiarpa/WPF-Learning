@@ -56,5 +56,10 @@ namespace LearningApp
             var value = (ComboBoxItem)combo.SelectedValue;
             NoteText.Text = (string)value.Content;
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            FinishDropDown_SelectionChanged(FinishDropDown, null);
+        }
     }
 }
