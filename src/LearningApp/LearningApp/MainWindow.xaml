@@ -20,21 +20,21 @@
                 <Button x:Name="ResetButton" Click="ResetButton_Click" Grid.Column="1" Content="Reset" />
                 <Button Margin="10 0 0 0" Grid.Column="2" Content="Refresh" />
             </Grid>
-            
+
             <!-- *** Pulse Properties *** -->
             <TextBlock Text="Pulse Properties" FontWeight="Bold" Margin="0 10" />
 
             <!-- Description -->
             <TextBlock Text="Description" />
             <TextBox Padding="2" />
-            
+
             <!-- Status and Revision -->
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                
+
                 <!-- Status -->
                 <StackPanel Grid.Column="0" Margin="0 0 10 0">
                     <TextBlock Text="Status" />
@@ -47,31 +47,31 @@
                     <TextBox IsReadOnly="True" Background="#eee" Padding="2" />
                 </StackPanel>
             </Grid>
-            
+
             <!-- Part Number -->
             <TextBlock Text="Part Number" />
             <TextBox IsReadOnly="True" Background="#eee" Padding="2" />
-            
+
             <!-- *** Raw Material *** -->
             <TextBlock Text="Raw Material" FontWeight="Bold" Margin="0 10" />
 
             <!-- Material -->
             <TextBlock Text="Material" />
             <ComboBox Padding="2" />
-            
+
             <!-- *** Manufacturing Info *** -->
             <TextBlock Text="Manufacturing Info" FontWeight="Bold" Margin="0 10" />
-            
+
             <!-- Work Centres -->
             <TextBlock Text="Work Centres" />
-            
+
             <!-- Checkboxes -->
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                
+
                 <!-- Column 1 -->
                 <StackPanel Grid.Column="0" Margin="0 0 10 0">
                     <CheckBox Checked="Checkbox_Checked" x:Name="WeldCheckbox" Content="Weld" />
@@ -94,14 +94,14 @@
             <!-- Length -->
             <TextBlock Text="Length" />
             <TextBox x:Name="LengthText" Padding="2" />
-            
+
             <!-- Mass -->
             <TextBlock Text="Mass" />
             <TextBox IsReadOnly="True" Background="#eee" Padding="2" />
 
             <!-- Finish -->
             <TextBlock Text="Finish" />
-            <ComboBox SelectedIndex="0" Padding="2">
+            <ComboBox x:Name="FinishDropDown" SelectionChanged="FinishDropDown_SelectionChanged" SelectedIndex="0" Padding="2">
                 <ComboBoxItem>Painted</ComboBoxItem>
                 <ComboBoxItem>Not Painted</ComboBoxItem>
             </ComboBox>
@@ -120,7 +120,7 @@
             <!-- Supplier Code -->
             <TextBlock Text="Supplier Code" />
             <TextBox Padding="2" />
-            
+
             <!-- *** Additional Info *** -->
             <TextBlock Text="Additional Info" FontWeight="Bold" Margin="0 10" />
 

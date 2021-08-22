@@ -48,5 +48,13 @@ namespace LearningApp
         {
             LengthText.Text += (string)((CheckBox)sender).Content;
         }
+
+        private void FinishDropDown_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (NoteText == null) return;
+            var combo = (ComboBox)sender;
+            var value = (ComboBoxItem)combo.SelectedValue;
+            NoteText.Text = (string)value.Content;
+        }
     }
 }
