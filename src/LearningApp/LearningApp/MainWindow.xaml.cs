@@ -24,5 +24,29 @@ namespace LearningApp
         {
             InitializeComponent();
         }
+
+        private void ApplyButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hi");
+        }
+
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            WeldCheckbox.IsChecked
+                = AssemblyCheckbox.IsChecked
+                = PlasmaCheckbox.IsChecked
+                = LaserCheckbox.IsChecked
+                = PurchaseCheckbox.IsChecked
+                = LatheCheckbox.IsChecked
+                = DrillCheckbox.IsChecked
+                = FoldCheckbox.IsChecked
+                = RollCheckbox.IsChecked
+                = SawCheckbox.IsChecked = false;
+        }
+
+        private void Checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+            LengthText.Text += (string)((CheckBox)sender).Content;
+        }
     }
 }
