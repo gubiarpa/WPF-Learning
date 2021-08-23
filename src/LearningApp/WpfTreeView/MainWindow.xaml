@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfTreeView"
+        Loaded="Window_Loaded"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -15,7 +16,7 @@
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
                                     <Image Width="20" Margin="3" Source="Images/drive.png"></Image>
-                                    <TextBlock VerticalAlignment="Center" Text="Some Folder"></TextBlock>
+                                    <TextBlock VerticalAlignment="Center" Text="{Binding}"></TextBlock>
                                 </StackPanel>
                             </DataTemplate>
                         </Setter.Value>

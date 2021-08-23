@@ -101,13 +101,10 @@
     <Resource Include="Images\file.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\folder-closed.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Images\folder-open.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\folder-close.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Images\drive.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
