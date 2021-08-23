@@ -50,6 +50,7 @@ namespace WpfTreeView
 
         private void Folder_Expanded(object sender, RoutedEventArgs e)
         {
+            #region InitialChecks
             var item = (TreeViewItem)sender;
 
             /// If the item only contains the dummy data
@@ -60,6 +61,7 @@ namespace WpfTreeView
 
             /// Get folder name
             var fullPath = (string)item.Tag;
+            #endregion
 
             #region GetDirectories
             /// Create a blank list for directories
@@ -94,6 +96,39 @@ namespace WpfTreeView
 
                 /// Handle expanding
                 subItem.Expanded += Folder_Expanded;
+
+                /// Add this item to the parent
+                item.Items.Add(subItem);
+            });
+            #endregion
+
+            #region Files
+            /// Create a blank list for files
+            var files = new List<string>();
+
+            /// Try and get directories from the files
+            /// ignoring any issues doing so
+            try
+            {
+                var fs = Directory.GetFiles(fullPath);
+
+                if (fs.Length > 0) files.AddRange(fs);
+            }
+            catch
+            {
+            }
+
+            /// For each directory
+            files.ForEach(filePath =>
+            {
+                /// Create directory item
+                var subItem = new TreeViewItem()
+                {
+                    /// Set header as folder name
+                    Header = GetDirectoryName(filePath),
+                    /// And tag as full path
+                    Tag = filePath
+                };
 
                 /// Add this item to the parent
                 item.Items.Add(subItem);
