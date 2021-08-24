@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Media.Imaging;
+using WpfTreeView.Directory;
 
 namespace WpfTreeView
 {
@@ -26,7 +27,7 @@ namespace WpfTreeView
             /// If the path is null, ignore
             if (path == null) return null;
 
-            var name = MainWindow.GetDirectoryName(path);
+            var name = DirectoryStructure.GetDirectoryName(path);
             
             /// By default, we presume an image
             var image = "Images/file.png";
