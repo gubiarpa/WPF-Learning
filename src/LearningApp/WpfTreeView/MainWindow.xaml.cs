@@ -19,14 +19,5 @@ namespace WpfTreeView
             InitializeComponent();
         }
         #endregion
-
-        #region FolderExpanded
-        /// <summary>
-        /// whe a folder is expanded, find the sub folders/files
-        private void Folder_Expanded(object sender, RoutedEventArgs e)
-        {
-           
-        }
-        #endregion
     }
 }
