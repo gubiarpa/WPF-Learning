@@ -17,8 +17,6 @@ namespace WpfTreeView
         public MainWindow()
         {
             InitializeComponent();
-
-            this.DataContext = new Class1();
         }
         #endregion
     }
